@@ -10,9 +10,6 @@ const navItems = [
 
 export function NavBar() {
 
-
- 
-
   return (
     <>
       <nav
@@ -31,7 +28,7 @@ export function NavBar() {
               <a
                 href={items.href}
                 key={key}
-                className="text-white font-raleway-reg text-sm hover:text-primary transition-colors duration-300"
+                className="text-white font-raleway-reg text-sm md:text-lg hover:underline hover:font-opensan-bold transition-all  hover:text-primary  duration-300"
               >
                 {items.name}
               </a>
