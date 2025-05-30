@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Raleway-Regular;
+  src: url(/fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: Raleway-Bold;
+  src: url(/fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: Open-sans-Regular;
+  src: url(/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Open-sans-Bold;
+  src: url(/fonts/OpenSans-Bold.ttf);
+}
+
+@theme {
+
+  --font-raleway-reg: Raleway-Regular;
+  --font-raleway-bold: Raleway-Bold;
+  --font-opensan-reg: Open-sans-Regular;
+  --font-opensan-bold: Open-sans-Bold;
+
+
+  --color-navy-850: hsl(217, 28%, 15%);
+  --color-navy-900: hsl(218, 28%, 13%);
+  --color-navy-950: hsl(216, 53%, 9%);
+  --color-navy-800: hsl(219, 30%, 18%);
+  --color-accent-teal: hsl(176, 68%, 64%);
+  --color-accent-cyan: hsl(198, 60%, 50%);
+  --color-accent-red: hsl(0, 100%, 63%);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+  --animate-slide-in-left-delay-4: slide-in-left 0.7s ease-out 0.8s forwards;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes slide-in-left {
+
+    from {
+      opacity: 0;
+      transform: translateX(-400%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX();
+
+    }
+  }
+
+  @keyframes fade-in {
+    form {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+
+    70% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+
+
+
+  html {
+    @apply scroll-smooth;
+  }
+
+}
+
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.access {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.security {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all .3s ease;
+}
